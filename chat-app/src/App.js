@@ -6,7 +6,7 @@ function App() {
   const [name, setName] = useState('')
 
   return (
-    <div>
+    <div >
       <h1>User: {name}</h1>
       <div className='chat-container'>
         <div className="container me">
@@ -24,6 +24,7 @@ function App() {
       </div>
       <div className="message-box">
         <input type="text" placeholder='Type your message' />
+        <button className='send'>Send</button>
       </div>
     </div>
   );

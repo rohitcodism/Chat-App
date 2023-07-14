@@ -1,5 +1,5 @@
 body{
-  background-color: black;
+  background-color: rgba(0, 0, 0, .8);
   color: white;
 }
 
@@ -14,11 +14,11 @@ body{
 }
 
 .message-box{
-  border: none;
-  color: white;
-  background-color: #839AA8;
-  width: 60%;
-
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
 .chat-box.me{
@@ -32,4 +32,16 @@ body{
 
 .container.me{
   flex-direction: row-reverse;
+}
+
+.send{
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 20%;
+}
+
+.message-box > input {
+  width: 75%;
+  height: 30px;
+  border-radius: 5%;
 }
