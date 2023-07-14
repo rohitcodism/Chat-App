@@ -10,8 +10,10 @@ body{
 }
 
 .chat-box{
+  width: 30%;
+  height: auto;
   border: 2px solid grey;
-  border-radius: 5px;
+  border-radius: 15px;
   border-top-left-radius: 0;
   margin: 5px 0;
   margin-left: 120px;
@@ -37,6 +39,7 @@ h3{
 
 .chat-box.me{
   border-top-right-radius: 0;
+  border-top-left-radius: 15px;
   border-color: black;
   background-color: #82CD47;
 }
@@ -53,13 +56,15 @@ h3{
   width: 80px;
   margin-left: 20px;
   padding: 5px;
-  border-radius: 10%;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .message-box > input {
   width: 80%;
+  outline: none;
   margin-left: 25%;
   height: 30px;
-  border-radius: 5%;
+  padding-left: 5px;
+  border-radius: 10px;
 }

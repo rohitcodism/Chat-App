@@ -3,8 +3,14 @@ import './App.css';
 
 function App() {
 
-  const [name, setName] = useState('user2');
-  const [chats, setChats] = useState([{name: 'user1', message: 'message1'}, { name: 'user2', message: 'message2' }])
+  const [name, setName] = useState('user1');
+  const [chats, setChats] = useState([{name: 'user1', message: 'message1'}, { name: 'user2', message: 'message2' }]);
+  const [msg, setmsg] = useState('');
+  const sendChat = ()=>{
+    const c = [...chats];
+    c.push({name, message: msg});
+    setChats(c);
+  }
 
   return (
     <div className='chat-contain'>
@@ -19,8 +25,8 @@ function App() {
           )}
       </div>
       <div className="message-box">
-        <input type="text" placeholder='Type your message' />
-        <button className='send'>Send</button>
+        <input type="text" placeholder='Type your message' onInput={ e => setmsg(e.target.value)} />
+        <button className='send' onClick={e => sendChat()}>Send</button>
       </div>
     </div>
   );
