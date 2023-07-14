@@ -32,9 +32,36 @@ body{
   position: fixed;
 }
 
+.owner{
+  width: 50%;
+  margin-left: 25px;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.owner > input {
+  width: 75%;
+  height: 30px;
+  top: 10px;
+  margin: 10px;
+  outline: none;
+
+}
+
+.owner > button{
+  width: 60px;
+  height: 30px;
+  top: 13px;
+  position: relative;
+  border-radius: 10px;
+}
+
 h3{
   background-color: #82CD47;
-  padding-left: 120px;
+  padding-left: 38px;
+  height: 30px;
+  
 }
 
 .chat-box.me{
