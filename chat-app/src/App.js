@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
 
@@ -8,10 +9,12 @@ function App() {
     <div>
       <h1>User: {name}</h1>
       <div className='chat-container'>
-        <p>
-          <strong> name: </strong>
-          <span>chat message</span>
-        </p>
+        <div className="container me">
+          <p className='chat-box'>
+            <strong> name: </strong>
+            <span>chat message</span>
+          </p>
+        </div>
       </div>
     </div>
   );
