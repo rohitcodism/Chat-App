@@ -3,18 +3,18 @@ import './App.css';
 
 function App() {
 
-  const [name, setName] = useState('');
+  const [name, setName] = useState('user2');
   const [chats, setChats] = useState([{name: 'user1', message: 'message1'}, { name: 'user2', message: 'message2' }])
 
   return (
     <div className='chat-contain'>
-      <h1>User: {name}</h1>
+      <h3>User: {name}</h3>
       <div className='chat-container'>
-          {chats.map(c => <div className={` container ${c.name === name ? 'me' : ''}`}>
-          <p className='chat-box'>
-            <strong> {c.name} </strong>
-            <span>{ c.message }</span>
-          </p>
+          {chats.map(c => <div className={` container  ${c.name === name ? 'me' : ''}`}>
+              <p className={`chat-box  ${c.name === name ? 'me' : ''}`}>
+                <strong> {c.name} </strong>
+                <span>{ c.message }</span>
+              </p>
             </div> 
           )}
       </div>

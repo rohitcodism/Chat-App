@@ -30,17 +30,18 @@ body{
   position: fixed;
 }
 
-h1{
+h3{
   background-color: #82CD47;
   padding-left: 120px;
 }
 
 .chat-box.me{
   border-top-right-radius: 0;
+  border-color: black;
   background-color: #82CD47;
 }
 
-.container{
+.container.me{
   display: flex;
 }
 
