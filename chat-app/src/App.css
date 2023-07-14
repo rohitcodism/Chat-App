@@ -1,8 +1,28 @@
+body{
+  background-color: black;
+  color: white;
+}
+
 .chat-box{
   border: 2px solid grey;
   border-radius: 5px;
+  border-top-left-radius: 0;
   margin: 5px 0;
   padding: 10px;
+  background-color: #003865;
+  color: white;
+}
+
+.message-box{
+  border: none;
+  color: white;
+  background-color: #839AA8;
+  width: 60%;
+
+}
+
+.chat-box.me{
+  border-top-right-radius: 0;
   background-color: #82CD47;
 }
 

@@ -10,11 +10,20 @@ function App() {
       <h1>User: {name}</h1>
       <div className='chat-container'>
         <div className="container me">
-          <p className='chat-box'>
+          <p className='chat-box me'>
             <strong> name: </strong>
             <span>chat message</span>
           </p>
         </div>
+        <div className="container ">
+          <p className='chat-box '>
+            <strong> name: </strong>
+            <span>chat message</span>
+          </p>
+        </div>
+      </div>
+      <div className="message-box">
+        <input type="text" placeholder='Type your message' />
       </div>
     </div>
   );
