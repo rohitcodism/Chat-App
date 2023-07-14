@@ -6,7 +6,7 @@ function App() {
   const [name, setName] = useState('')
 
   return (
-    <div >
+    <div className='chat-contain'>
       <h1>User: {name}</h1>
       <div className='chat-container'>
         <div className="container me">
