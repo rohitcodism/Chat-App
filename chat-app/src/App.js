@@ -14,11 +14,11 @@ function App() {
   const database = getDatabase();
   const chatListRef = ref(database, 'chat');
 
-  useEffect(() => {
+  useEffect(()=>{
     onChildAdded(chatListRef, (data) => {
-      console.log(data.val());
-    });
-  })
+      setChats(chats => [...chats, data.val()]);
+    });    
+  },[])
 
 
 
@@ -27,10 +27,6 @@ function App() {
     set(newChatRef, {
       name, message: msg
     });
-
-    // const c = [...chats];
-    // c.push();
-    // setChats(c);
     setmsg('');
   }
 
@@ -42,7 +38,7 @@ function App() {
       { name ? <div>
         <h3>User: {name}</h3>
       <div className='chat-container'>
-          {chats.map(c => <div className={` container  ${c.name === name ? 'me' : ''}`}>
+          {chats.map((c, i) => <div key={i}  className={` container  ${c.name === name ? 'me' : ''}`}>
               <p className={`chat-box  ${c.name === name ? 'me' : ''}`}>
                 <strong> {c.name} </strong>
                 <span>{ c.message }</span>
